@@ -15,7 +15,7 @@ trait Markable
      */
     public function scopeMark($query, $value)
     {
-        return $query->markIn(array $value);
+        return $query->markIn((array) $value);
     }
 
     /**
