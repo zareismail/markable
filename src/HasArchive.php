@@ -53,6 +53,6 @@ trait HasArchive
      */
     public function getArchiveVlaue()
     {
-        return static::ARCHIVE_VALUE ?? 'archive';
+        return defined('static::ARCHIVE_VALUE') ? static::ARCHIVE_VALUE : 'archive';
     }
 }

@@ -54,6 +54,6 @@ trait HasDraft
      */
     public function getDraftVlaue()
     {
-        return static::DRAFT_VALUE ?? 'draft';
+        return defined('static::DRAFT_VALUE') ? static::DRAFT_VALUE : 'draft';
     }
 }

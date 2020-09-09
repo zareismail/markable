@@ -53,6 +53,6 @@ trait HasPending
      */
     public function getPendingVlaue()
     {
-        return static::PENDING_VALUE ?? 'pending';
+        return defined('static::PENDING_VALUE') ? static::PENDING_VALUE : 'pending';
     }
 }

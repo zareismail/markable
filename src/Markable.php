@@ -86,6 +86,6 @@ trait Markable
      */
     public function getMarkedAsColumn()
     {
-        return static::MARKED_AS;
+        return defined('static::MARKED_AS') ? static::MARKED_AS : 'marked_as';
     }
 }

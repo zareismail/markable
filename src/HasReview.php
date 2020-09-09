@@ -53,6 +53,6 @@ trait HasReview
      */
     public function getReviewVlaue()
     {
-        return static::REVIEW_VALUE ?? 'review';
+        return defined('static::REVIEW_VALUE') ? static::REVIEW_VALUE : 'review';
     }
 }
