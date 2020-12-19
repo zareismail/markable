@@ -12,7 +12,7 @@ trait HasPending
      */
     public function asPending()
     {
-        return $this->markAs($this->getPendingVlaue());
+        return $this->markAs($this->getPendingValue());
     } 
 
     /**
@@ -22,7 +22,7 @@ trait HasPending
      */
     public function isPending()
     {
-        return $this->markedAs($this->getPendingVlaue());
+        return $this->markedAs($this->getPendingValue());
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasPending
      */
     public function scopePendings($query)
     {
-        return $this->mark($this->getPendingVlaue());
+        return $this->mark($this->getPendingValue());
     }
 
     /**
@@ -43,7 +43,7 @@ trait HasPending
      */
     public function setPending()
     {
-        return $this->setMarkedAs($this->getPendingVlaue());
+        return $this->setMarkedAs($this->getPendingValue());
     }
 
     /**
@@ -51,7 +51,7 @@ trait HasPending
      *
      * @return string
      */
-    public function getPendingVlaue()
+    public function getPendingValue()
     {
         return defined('static::PENDING_VALUE') ? static::PENDING_VALUE : 'pending';
     }

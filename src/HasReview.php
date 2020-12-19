@@ -12,7 +12,7 @@ trait HasReview
      */
     public function asReview()
     {
-        return $this->markAs($this->getReviewVlaue());
+        return $this->markAs($this->getReviewValue());
     } 
 
     /**
@@ -22,7 +22,7 @@ trait HasReview
      */
     public function isReview()
     {
-        return $this->markedAs($this->getReviewVlaue());
+        return $this->markedAs($this->getReviewValue());
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasReview
      */
     public function scopeReviews($query)
     {
-        return $this->mark($this->getReviewVlaue());
+        return $this->mark($this->getReviewValue());
     }
 
     /**
@@ -43,7 +43,7 @@ trait HasReview
      */
     public function setReview()
     {
-        return $this->setMarkedAs($this->getReviewVlaue());
+        return $this->setMarkedAs($this->getReviewValue());
     }
 
     /**
@@ -51,7 +51,7 @@ trait HasReview
      *
      * @return string
      */
-    public function getReviewVlaue()
+    public function getReviewValue()
     {
         return defined('static::REVIEW_VALUE') ? static::REVIEW_VALUE : 'review';
     }

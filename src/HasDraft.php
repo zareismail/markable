@@ -12,7 +12,7 @@ trait HasDraft
      */
     public function asDraft()
     {
-        return $this->markAs($this->getDraftVlaue());
+        return $this->markAs($this->getDraftValue());
     } 
 
     /**
@@ -23,7 +23,7 @@ trait HasDraft
      */
     public function isDraft()
     {
-        return $this->markedAs($this->getDraftVlaue());
+        return $this->markedAs($this->getDraftValue());
     }
 
     /**
@@ -34,7 +34,7 @@ trait HasDraft
      */
     public function scopeDrafts($query)
     {
-        return $this->mark($this->getDraftVlaue());
+        return $this->mark($this->getDraftValue());
     }
 
     /**
@@ -44,7 +44,7 @@ trait HasDraft
      */
     public function setDraft()
     {
-        return $this->setMarkedAs($this->getDraftVlaue());
+        return $this->setMarkedAs($this->getDraftValue());
     }
 
     /**
@@ -52,7 +52,7 @@ trait HasDraft
      *
      * @return string
      */
-    public function getDraftVlaue()
+    public function getDraftValue()
     {
         return defined('static::DRAFT_VALUE') ? static::DRAFT_VALUE : 'draft';
     }

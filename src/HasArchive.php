@@ -12,7 +12,7 @@ trait HasArchive
      */
     public function asArchive()
     {
-        return $this->markAs($this->getArchiveVlaue());
+        return $this->markAs($this->getArchiveValue());
     } 
 
     /**
@@ -22,7 +22,7 @@ trait HasArchive
      */
     public function isArchive()
     {
-        return $this->markedAs($this->getArchiveVlaue());
+        return $this->markedAs($this->getArchiveValue());
     }
 
     /**
@@ -33,7 +33,7 @@ trait HasArchive
      */
     public function scopeArchives($query)
     {
-        return $this->mark($this->getArchiveVlaue());
+        return $this->mark($this->getArchiveValue());
     }
 
     /**
@@ -43,7 +43,7 @@ trait HasArchive
      */
     public function setArchive()
     {
-        return $this->setMarkedAs($this->getArchiveVlaue());
+        return $this->setMarkedAs($this->getArchiveValue());
     }
 
     /**
@@ -51,7 +51,7 @@ trait HasArchive
      *
      * @return string
      */
-    public function getArchiveVlaue()
+    public function getArchiveValue()
     {
         return defined('static::ARCHIVE_VALUE') ? static::ARCHIVE_VALUE : 'archive';
     }
