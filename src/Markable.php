@@ -53,7 +53,7 @@ trait Markable
      */
     public function markedAs($value): bool
     {
-        return $this->{$this->getMarkedAsColumn()} === $value;
+        return $this->getMarkedAsValue() === $value;
     }
 
     /**
@@ -67,6 +67,17 @@ trait Markable
         $this->{$this->getMarkedAsColumn()} = $value;
 
         return $this; 
+    }
+
+    /**
+     * Returns value of the "marked as" column.
+     *
+     * @param  mixed  $value
+     * @return $this
+     */
+    public function getMarkedAsValue()
+    {
+        return $this->{$this->getMarkedAsColumn()};
     }
 
     /**
