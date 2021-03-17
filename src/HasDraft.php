@@ -16,12 +16,23 @@ trait HasDraft
     } 
 
     /**
-     * Determine if the value of the model's "marked as" attribute is equal to the "draft" value.
+     * Alias of "isDrafted".
      * 
      * @param  string $value 
      * @return bool       
      */
     public function isDraft()
+    {
+        return $this->isDrafted();
+    }
+
+    /**
+     * Determine if the value of the model's "marked as" attribute is equal to the "draft" value.
+     * 
+     * @param  string $value 
+     * @return bool       
+     */
+    public function isDrafted()
     {
         return $this->markedAs($this->getDraftValue());
     }
