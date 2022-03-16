@@ -33,7 +33,7 @@ trait HasArchive
      */
     public function scopeArchives($query)
     {
-        return $this->mark($this->getArchiveValue());
+        return $query->mark($this->getArchiveValue());
     }
 
     /**

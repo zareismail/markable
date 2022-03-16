@@ -45,7 +45,7 @@ trait HasDraft
      */
     public function scopeDrafts($query)
     {
-        return $this->mark($this->getDraftValue());
+        return $query->mark($this->getDraftValue());
     }
 
     /**

@@ -33,7 +33,7 @@ trait HasPending
      */
     public function scopePendings($query)
     {
-        return $this->mark($this->getPendingValue());
+        return $query->mark($this->getPendingValue());
     }
 
     /**

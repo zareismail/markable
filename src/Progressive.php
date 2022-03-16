@@ -55,7 +55,7 @@ trait Progressive
      */
     public function scopeInprogresses($query)
     {
-        return $this->mark($this->getInprogressValue());
+        return $query->mark($this->getInprogressValue());
     }
 
     /**

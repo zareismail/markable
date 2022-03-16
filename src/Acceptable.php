@@ -45,7 +45,7 @@ trait Acceptable
      */
     public function scopeAccepted($query)
     {
-        return $this->mark($this->getAcceptedValue());
+        return $query->mark($this->getAcceptedValue());
     }
 
     /**

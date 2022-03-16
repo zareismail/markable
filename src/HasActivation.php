@@ -44,7 +44,7 @@ trait HasActivation
      */
     public function scopeActives($query, bool $activation = true)
     {
-        return $this->mark($this->getActivationValue($activation));
+        return $query->mark($this->getActivationValue($activation));
     }
 
     /**

@@ -46,7 +46,7 @@ trait Publishable
      */
     public function scopePublishes($query)
     {
-        return $this->mark($this->getPublishedValue());
+        return $query->mark($this->getPublishedValue());
     }
 
     /**

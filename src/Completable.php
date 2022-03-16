@@ -45,7 +45,7 @@ trait Completable
      */
     public function scopeCompleted($query)
     {
-        return $this->mark($this->getCompletedValue());
+        return $query->mark($this->getCompletedValue());
     }
 
     /**

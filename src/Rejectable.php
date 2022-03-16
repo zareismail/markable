@@ -45,7 +45,7 @@ trait Rejectable
      */
     public function scopeRejected($query)
     {
-        return $this->mark($this->getRejectedValue());
+        return $query->mark($this->getRejectedValue());
     }
 
     /**

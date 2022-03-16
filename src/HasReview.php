@@ -33,7 +33,7 @@ trait HasReview
      */
     public function scopeReviews($query)
     {
-        return $this->mark($this->getReviewValue());
+        return $query->mark($this->getReviewValue());
     }
 
     /**
